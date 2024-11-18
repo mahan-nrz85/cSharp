@@ -52,19 +52,20 @@ namespace GameNet
         }
         private void loginHandler(string username, string password)
         {
-            //if(AuthenticateUser(username , password))
-            //{
-            //    frmAdminPanel formAdminPanel = new frmAdminPanel();
-            //    this.Hide();
-            //    formAdminPanel.Show();
-            //} else
-            //{
+            if (AuthenticateUser(username, password))
+            {
+                frmAdminPanel formAdminPanel = new frmAdminPanel();
+                this.Hide();
+                formAdminPanel.Show();
+            }
+            else
+            {
 
-            //    lbl_err.Text = "اطلاعات وارد شده صحیح نمیباشد";
-            //    lbl_err.Visible = true;
-            //    clearTxt();
-            //    errorTimer.Start();
-            //}
+                lbl_err.Text = "اطلاعات وارد شده صحیح نمیباشد";
+                lbl_err.Visible = true;
+                clearTxt();
+                errorTimer.Start();
+            }
         }
         public bool dragging = false;
         public Point dragCursorPoint;
