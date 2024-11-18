@@ -1,0 +1,40 @@
+c:\users\user\documents\visual studio 2015\Projects\GameNet\GameNet\bin\Debug\GameNet.exe.config
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\bin\Debug\GameNet.exe
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\bin\Debug\GameNet.pdb
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\obj\Debug\GameNet.csprojResolveAssemblyReference.cache
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\obj\Debug\GameNet.Form1.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\obj\Debug\GameNet.Properties.Resources.resources
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\obj\Debug\GameNet.csproj.GenerateResource.Cache
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\obj\Debug\GameNet.exe
+C:\Users\USER\Documents\Visual Studio 2015\Projects\GameNet\GameNet\obj\Debug\GameNet.pdb
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\bin\Debug\GameNet.exe.config
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\bin\Debug\GameNet.exe
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\bin\Debug\GameNet.pdb
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.csprojAssemblyReference.cache
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.Form1.resources
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.Properties.Resources.resources
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.csproj.GenerateResource.cache
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.csproj.CoreCompileInputs.cache
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.exe
+C:\Users\Mahan dev\Desktop\C#\GameNet\GameNet\obj\Debug\GameNet.pdb
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\bin\Debug\GameNet.exe.config
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\bin\Debug\GameNet.exe
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\bin\Debug\GameNet.pdb
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.csprojAssemblyReference.cache
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.Form1.resources
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.Properties.Resources.resources
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.csproj.GenerateResource.cache
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.csproj.CoreCompileInputs.cache
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.exe
+C:\Users\Mahan dev\Desktop\GameNetMain\GameNet\GameNet\obj\Debug\GameNet.pdb
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\bin\Debug\GameNet.exe.config
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\bin\Debug\GameNet.exe
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\bin\Debug\GameNet.pdb
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.csprojAssemblyReference.cache
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.frmRegister.resources
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.Form1.resources
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.Properties.Resources.resources
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.csproj.GenerateResource.cache
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.csproj.CoreCompileInputs.cache
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.exe
+C:\Users\Mahan dev\Desktop\GAMENET\GameNet\GameNet\obj\Debug\GameNet.pdb
