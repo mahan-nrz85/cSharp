@@ -71,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminPanel.resx">
+      <DependentUpon>frmAdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pic-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin ps51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin ps41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin pc1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

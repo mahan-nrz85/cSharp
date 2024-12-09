@@ -38,6 +38,23 @@ namespace GameNet
         }
         // sql connection
         private string connectionString = "Data Source=localhost;Initial Catalog=GAMENET;Integrated Security=True";
+        public bool IsUsernameUnique(string username)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM admins WHERE username = @Username"; // کوئری بررسی تکراری بودن نام کاربری
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username); // تنظیم پارامترهای کوئری
+                    int count = (int)command.ExecuteScalar(); // اجرای کوئری و دریافت نتیجه
+                    return count == 0; // اگر تعداد صفر بود یعنی نام کاربری یکتا است
+                }
+            }
+        }
+
+
         public frmRegister()
         {
             InitializeComponent();
@@ -45,12 +62,12 @@ namespace GameNet
             errTimer = new Timer();
             errTimer.Interval = 3000;
             errTimer.Tick += register_timer_Tick;
+            
         }
-        
-       
+
         
 
-        private void frmRegister_Load(object sender, EventArgs e)
+            private void frmRegister_Load(object sender, EventArgs e)
         {
 
         }
@@ -97,52 +114,63 @@ namespace GameNet
             string password = txt_password.Text;
             string repass = txt_repassword.Text;
             bool is_equal = true;
-
+            
             if (String.IsNullOrWhiteSpace(username))
             {
                 lbl_error.Text = "نام کاربری را پر کنید";
                 lbl_error.Visible = true;
                 is_equal = false;
+                register_timer.Start();
 
             } else if (String.IsNullOrWhiteSpace(password))
             {
                 lbl_errorpass.Text = "رمز عبور مناسب وارد کنید";
                 lbl_errorpass.Visible = true;
                 is_equal = false;
+                register_timer.Start();
 
             } else if (password != repass)
             {
                 lbl_errRepass.Text = "تکرار رمز عبور صحیح نیست";
                 lbl_errRepass.Visible = true;
                 is_equal = false;
+                register_timer.Start();
             }
-           
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            if (IsUsernameUnique(username))
             {
-                // نوشتن درخواست به دیتا بیس و دادن پاارمتر ها به یک دیگر
-                string query = "INSERT INTO admins (username , password) VALUES (@username , @password)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password);
-                try
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                   // در صورت درست بودن فلگ چک کردن مقادیر فیلد ها ارتباط و احرا دستورات برای دیتا بیس انجام میشود
-                    if (is_equal == true)
+                    // نوشتن درخواست به دیتا بیس و دادن پاارمتر ها به یک دیگر
+                    string query = "INSERT INTO admins (username , password) VALUES (@username , @password)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+                    try
                     {
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("کاربر با موفقیت ثبت شد");
-                        Form1 frmlogin = new Form1();
-                        this.Hide();
-                        frmlogin.Show();
+                        // در صورت درست بودن فلگ چک کردن مقادیر فیلد ها ارتباط و احرا دستورات برای دیتا بیس انجام میشود
+                        if (is_equal == true)
+                        {
+                            connection.Open();
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("کاربر با موفقیت ثبت شد");
+                            Form1 frmlogin = new Form1();
+                            this.Hide();
+                            frmlogin.Show();
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
             }
+            else
+            {
+                MessageBox.Show("خطا", "invalid");
+            }
+            
+       
         }
 
         private void minimize_btn_Click(object sender, EventArgs e)
@@ -157,12 +185,27 @@ namespace GameNet
 
         private void lbl_error_Click(object sender, EventArgs e)
         {
+            lbl_error.Visible = false;
 
         }
 
         private void register_timer_Tick(object sender, EventArgs e)
         {
-            
+            lbl_error.Visible = false;
+            lbl_errorpass.Visible = false;
+            lbl_errRepass.Visible = false;
+            register_timer.Stop();
+            // متوقف کردن تایمر
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void register_timer_Tick_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
