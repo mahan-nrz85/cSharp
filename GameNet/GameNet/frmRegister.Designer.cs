@@ -51,6 +51,7 @@
             this.lbl_errRepass = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.register_timer = new System.Windows.Forms.Timer(this.components);
+            this.pass_timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.minimize_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -268,6 +269,10 @@
             // 
             this.register_timer.Tick += new System.EventHandler(this.register_timer_Tick_1);
             // 
+            // pass_timer
+            // 
+            this.pass_timer.Interval = 3000;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +341,6 @@
         private System.Windows.Forms.Label lbl_errRepass;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer register_timer;
+        private System.Windows.Forms.Timer pass_timer;
     }
 }

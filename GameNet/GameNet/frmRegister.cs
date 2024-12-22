@@ -62,7 +62,7 @@ namespace GameNet
             errTimer = new Timer();
             errTimer.Interval = 3000;
             errTimer.Tick += register_timer_Tick;
-            
+            register_timer.Start();
         }
 
         
@@ -115,27 +115,29 @@ namespace GameNet
             string repass = txt_repassword.Text;
             bool is_equal = true;
             
-            if (String.IsNullOrWhiteSpace(username))
-            {
-                lbl_error.Text = "نام کاربری را پر کنید";
-                lbl_error.Visible = true;
-                is_equal = false;
-                register_timer.Start();
+            //if (String.IsNullOrWhiteSpace(username))
+            //{
+            //    register_timer.Start();
+            //    lbl_error.Text = "نام کاربری را پر کنید";
+            //    lbl_error.Visible = true;
+            //    is_equal = false;
+               
 
-            } else if (String.IsNullOrWhiteSpace(password))
-            {
-                lbl_errorpass.Text = "رمز عبور مناسب وارد کنید";
-                lbl_errorpass.Visible = true;
-                is_equal = false;
-                register_timer.Start();
+            //} else if (String.IsNullOrWhiteSpace(password))
+            //{
+            //    register_timer.Start();
+            //    lbl_errorpass.Text = "رمز عبور مناسب وارد کنید";
+            //    lbl_errorpass.Visible = true;
+            //    is_equal = false;
+                
 
-            } else if (password != repass)
-            {
-                lbl_errRepass.Text = "تکرار رمز عبور صحیح نیست";
-                lbl_errRepass.Visible = true;
-                is_equal = false;
-                register_timer.Start();
-            }
+            //} else if (password != repass)
+            //{
+            //    lbl_errRepass.Text = "تکرار رمز عبور صحیح نیست";
+            //    lbl_errRepass.Visible = true;
+            //    is_equal = false;
+                
+            //}
             if (IsUsernameUnique(username))
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -167,7 +169,8 @@ namespace GameNet
             }
             else
             {
-                MessageBox.Show("خطا", "invalid");
+                MessageBox.Show("نام کاربری قبلا ثبت شده است" ,"خطا نام کاربری",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error , MessageBoxDefaultButton.Button1);
             }
             
        
@@ -192,8 +195,8 @@ namespace GameNet
         private void register_timer_Tick(object sender, EventArgs e)
         {
             lbl_error.Visible = false;
-            lbl_errorpass.Visible = false;
-            lbl_errRepass.Visible = false;
+            //lbl_errorpass.Visible = false;
+            //lbl_errRepass.Visible = false;
             register_timer.Stop();
             // متوقف کردن تایمر
         }
